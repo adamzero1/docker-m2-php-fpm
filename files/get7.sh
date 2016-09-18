@@ -8,7 +8,7 @@ fi
 # Setup
 ############################
 apt-get update
-apt-get install -y git-core autoconf bison libxml2-dev libbz2-dev libmcrypt-dev libcurl4-openssl-dev libltdl-dev libpng-dev libpspell-dev libreadline-dev make libicu-dev libxslt1-dev libjpeg-dev checkinstall auto-apt
+apt-get install -y git-core autoconf bison libxml2-dev libbz2-dev libmcrypt-dev libcurl4-openssl-dev pkg-config libltdl-dev libpng-dev libpspell-dev libreadline-dev make libicu-dev libxslt1-dev libjpeg-dev checkinstall auto-apt
 mkdir -p /etc/php7/conf.d
 mkdir -p /etc/php7/cli/conf.d
 mkdir /usr/local/php7
