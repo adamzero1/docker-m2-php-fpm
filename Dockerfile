@@ -1,4 +1,4 @@
-FROM ubuntu:xenial
+FROM ubuntu:trusty
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update --fix-missing
