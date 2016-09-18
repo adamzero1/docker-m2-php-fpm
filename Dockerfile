@@ -10,8 +10,8 @@ RUN chmod 777 /get7.sh
 RUN export TERM=xterm; /get7.sh
 
 # Update PHP FPM config
-RUN sed -i "s/^user = www-data/user = magento/g" /usr/local/php7/etc/php-fpm.d/www.conf
-RUN sed -i "s/^group = www-data/group = magento/g" /usr/local/php7/etc/php-fpm.d/www.conf
+#RUN sed -i "s/^user = www-data/user = magento/g" /usr/local/php7/etc/php-fpm.d/www.conf
+#RUN sed -i "s/^group = www-data/group = magento/g" /usr/local/php7/etc/php-fpm.d/www.conf
 RUN sed -i "s/pm.max_children = 5/pm.max_children = 40/g" /usr/local/php7/etc/php-fpm.d/www.conf
 RUN sed -i "s/;php_flag\[display_errors\] = off/php_flag\[display_errors\] = on/g" /usr/local/php7/etc/php-fpm.d/www.conf
 RUN sed -i "s/;php_admin_value\[memory_limit\] = 32M/php_admin_value\[memory_limit\] = 512M/g" /usr/local/php7/etc/php-fpm.d/www.conf
