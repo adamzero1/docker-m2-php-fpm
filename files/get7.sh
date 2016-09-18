@@ -69,6 +69,8 @@ make -j `nproc` && \
 # Install
 ############################
 checkinstall --pkgname=php --pkgversion=7 -y
+ls -lath /tmp/php-src/
+exit
 cp /tmp/php-src/php_7-1_amd64.deb ~/
 cp /tmp/php-src/sapi/fpm/init.d.php-fpm /etc/init.d/php-fpm && chmod +x /etc/init.d/php-fpm
 cp /usr/local/php7/etc/php-fpm.conf.default /usr/local/php7/etc/php-fpm.conf
