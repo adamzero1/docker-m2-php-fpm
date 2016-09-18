@@ -32,6 +32,12 @@ RUN apt-get clean
 # Disable local delivery
 RUN sed -i 's/mydestination = .*/mydestination = localhost/' /etc/postfix/main.cf
 
+# Define mountable directories.
+VOLUME ["/var/www/html"]
+
+# Define working directory.
+WORKDIR /usr/local/php7/
+
 EXPOSE 9000
 COPY files/entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
