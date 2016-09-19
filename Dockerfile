@@ -19,7 +19,7 @@ RUN sed -i "s/listen = \/run\/php\/php7\.0\-fpm\.sock/listen = 9000/g" /usr/loca
 RUN sed -i "s/listen = \/var\/run\/php-fpm\.sock/listen = 9000/g" /usr/local/php7/etc/php-fpm.d/www.conf
 RUN sed -i "s/;daemonize = yes/daemonize = no/g" /usr/local/php7/etc/php-fpm.conf
 RUN sed -i "s/memory_limit = 128M/memory_limit = 2G/g" /etc/php7/cli/php.ini
-RUN php5enmod mcrypt
+#RUN php5enmod mcrypt
 
 # Install postfix
 RUN export TERM=xterm; apt-get install -y --force-yes \
