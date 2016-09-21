@@ -10,7 +10,7 @@ RUN chmod 777 /get7.sh
 RUN export TERM=xterm; /get7.sh
 
 COPY files/init.sh /init.sh
-chmod +x /init.sh
+RUN chmod +x /init.sh
 
 # Install postfix
 RUN export TERM=xterm; apt-get install -y --force-yes \
