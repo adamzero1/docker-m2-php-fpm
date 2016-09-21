@@ -1,4 +1,11 @@
-#!/bin/sh
+#!/bin/bash
+
+if [ -f "/init.sh" ]; then
+  echo "running init.sh"
+  /bin/bash /init.sh
+  rm /init.sh
+fi
+
 service rsyslog start
 echo "rsys started"
 
